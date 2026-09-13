@@ -1,0 +1,312 @@
+/* ==========================================================================
+   North Star Bakery — styles.css
+   Design system: 4 colors, 2 font families, mobile-first, Flexbox layout
+   ========================================================================== */
+
+/* ---- Design tokens ---- */
+:root {
+  --color-cream: #FFF8F0;      /* page background */
+  --color-brown: #6B3E26;      /* headings, header/footer background */
+  --color-peach: #D88C5A;      /* accents, buttons, links */
+  --color-charcoal: #2F2A26;   /* body text */
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Nunito Sans', Arial, sans-serif;
+}
+
+/* ---- Reset ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ---- Headings & links (typography hierarchy) ---- */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-brown);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+}
+
+a {
+  color: var(--color-peach);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ---- Layout container (mobile-first: single column) ---- */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #EFE1D3;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+/* ---- Header: logo + nav, mobile-first stacked column ---- */
+header {
+  background-color: var(--color-brown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+header img {
+  max-width: 140px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: var(--color-cream);
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+}
+
+header nav a:hover,
+header nav a:focus {
+  background-color: var(--color-peach);
+  color: var(--color-brown);
+  text-decoration: none;
+}
+
+header nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-peach);
+}
+
+/* ---- Product grid (breads, pastries, cakes) ---- */
+.product-grid {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.product-grid li {
+  background-color: var(--color-cream);
+  border: 1px solid #EFE1D3;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--color-peach);
+}
+
+/* ---- Figure / figcaption ---- */
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--color-brown);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ---- Forms ---- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+fieldset {
+  border: 1px solid #EFE1D3;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+legend {
+  font-family: var(--font-heading);
+  color: var(--color-brown);
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+label {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #CBB89B;
+  border-radius: 4px;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-peach);
+  outline-offset: 1px;
+}
+
+button {
+  align-self: flex-start;
+  background-color: var(--color-peach);
+  color: var(--color-brown);
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+}
+
+/* ---- Audio ---- */
+audio {
+  width: 100%;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0 0 0.75rem;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav a {
+  color: var(--color-cream);
+}
+
+/* ==========================================================================
+   Responsive Layout — larger screens (tablet / desktop)
+   ========================================================================== */
+@media (min-width: 800px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .product-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-grid li {
+    flex: 1 1 30%;
+  }
+
+  fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  fieldset p {
+    flex: 1 1 45%;
+    margin: 0.5rem 0;
+  }
+
+  footer nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
