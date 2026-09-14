@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Star Bakery | Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="bakery-logo.png" alt="North Star Bakery logo, a hand-drawn star above a loaf of bread">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Our Products</h1>
+    <img src="bakery-bread.jpg" alt="A row of fresh sourdough loaves cooling on a wooden rack">
+    <section aria-labelledby="favorites-heading" id="favorites-summary">
+      <h2 id="favorites-heading">My Favorites</h2>
+      <p>
+        Tap &ldquo;Add to Favorites&rdquo; on any item below to build a quick list of
+        what you want to order or ask about next time you visit. Your list is saved
+        in this browser, so it's still here the next time you open this page.
+      </p>
+      <p id="favorites-empty">You haven't added any favorites yet.</p>
+      <ul id="favorites-list"></ul>
+    </section>
+    <section aria-labelledby="breads-heading">
+      <h2 id="breads-heading">Breads</h2>
+      <ul class="product-grid">
+        <li>
+          <h3>Classic Sourdough</h3>
+          <p>Slow-fermented for 24 hours, with a crisp crust and open crumb.</p>
+          <p class="price">Price range: $7&ndash;$9</p>
+          <button type="button" class="favorite-btn" data-product-id="sourdough"
+            data-product-name="Classic Sourdough" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+        <li>
+          <h3>Whole Wheat Country Loaf</h3>
+          <p>A heartier everyday loaf, great for sandwiches or toast.</p>
+          <p class="price">Price range: $6&ndash;$8</p>
+          <button type="button" class="favorite-btn" data-product-id="country-loaf"
+            data-product-name="Whole Wheat Country Loaf" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+        <li>
+          <h3>Seeded Multigrain</h3>
+          <p>Packed with sunflower, flax, and sesame seeds.</p>
+          <p class="price">Price range: $7&ndash;$9</p>
+          <button type="button" class="favorite-btn" data-product-id="multigrain"
+            data-product-name="Seeded Multigrain" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+      </ul>
+    </section>
+    <section aria-labelledby="pastries-heading">
+      <h2 id="pastries-heading">Pastries</h2>
+      <ul class="product-grid">
+        <li>
+          <h3>Butter Croissants</h3>
+          <p>Laminated dough, baked fresh every morning.</p>
+          <p class="price">Price range: $3.50&ndash;$4.50</p>
+          <button type="button" class="favorite-btn" data-product-id="croissants"
+            data-product-name="Butter Croissants" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+        <li>
+          <h3>Cinnamon Swirl Babka</h3>
+          <p>This week's featured item &mdash; soft, buttery, and swirled with
+            cinnamon sugar.</p>
+          <p class="price">Price range: $8&ndash;$10</p>
+          <button type="button" class="favorite-btn" data-product-id="babka"
+            data-product-name="Cinnamon Swirl Babka" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+        <li>
+          <h3>Seasonal Fruit Danishes</h3>
+          <p>Made with whatever fruit is freshest that week.</p>
+          <p class="price">Price range: $4&ndash;$5</p>
+          <button type="button" class="favorite-btn" data-product-id="danishes"
+            data-product-name="Seasonal Fruit Danishes" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+      </ul>
+    </section>
+    <section aria-labelledby="cakes-heading">
+      <h2 id="cakes-heading">Cakes</h2>
+      <ul class="product-grid">
+        <li>
+          <h3>Celebration Cakes</h3>
+          <p>Custom cakes for birthdays, weddings, and other milestones. Ask us
+            about flavors and design options.</p>
+          <p class="price">Price range: $35&ndash;$120, depending on size and design</p>
+          <button type="button" class="favorite-btn" data-product-id="celebration-cakes"
+            data-product-name="Celebration Cakes" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+        <li>
+          <h3>Individual Cupcakes</h3>
+          <p>Sold by the dozen, with rotating seasonal flavors.</p>
+          <p class="price">Price range: $28&ndash;$34 per dozen</p>
+          <button type="button" class="favorite-btn" data-product-id="cupcakes"
+            data-product-name="Individual Cupcakes" aria-pressed="false">☆ Add to Favorites</button>
+        </li>
+      </ul>
+    </section>
+    <figure>
+      <img src="bakery-signature-loaf.jpg" alt="Close-up of the North Star signature sourdough loaf, scored with a star pattern">
+      <figcaption>Our Signature Loaf &mdash; scored with the North Star pattern before every bake.</figcaption>
+    </figure>
+  </main>
+  <footer>
+    <p>North Star Bakery &middot; 142 Maple Street &middot; Open Tuesday&ndash;Sunday, 7:00 AM&ndash;3:00 PM</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
